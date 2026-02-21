@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SortMe</title>
+    <link rel="stylesheet" href="SortMe.css">
+</head>
+
+<body>
+    <header>
+        <h1>SortMe</h1>
+
+        <div class="controls">
+            <div class="group">
+                <label for="algo">Algorithm</label>
+                <select id="algo">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
+                </select>
+            </div>
+
+            <div class="group range">
+                <label for="size">Size</label>
+                <input id="size" type="range" min="10" max="160" value="60" />
+                <span class="pill" id="sizeVal">60</span>
+            </div>
+
+            <div class="group range">
+                <label for="speed">Speed</label>
+                <input id="speed" type="range" min="1" max="100" value="45" />
+                <span class="pill" id="speedVal">45</span>
+            </div>
+
+            <div class="group">
+                <button id="gen" class="primary">Generate</button>
+                <button id="start" class="primary">Start</button>
+                <button id="pause">Pause</button>
+                <button id="step">Step</button>
+                <button id="reset" class="danger">Reset</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="bar-area">
+            <div id="bars" aria-label="bars"></div>
+        </div>
+
+        <div class="footer">
+            <div class="stats">
+                <div>Comparisons: <b id="cmp">0</b></div>
+                <div>Swaps/Writes: <b id="swp">0</b></div>
+                <div>Events: <b id="ev">0</b></div>
+                <div>Status: <b id="status">Idle</b></div>
+            </div>
+
+            <div class="legend">
+                <span><span class="dot bar"></span>Bar</span>
+                <span><span class="dot compare"></span>Compare</span>
+                <span><span class="dot swap"></span>Swap/Write</span>
+                <span><span class="dot pivot"></span>Pivot</span>
+                <span><span class="dot sorted"></span>Sorted</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="SortMe.js"></script>
+</body>
+
+</html>
